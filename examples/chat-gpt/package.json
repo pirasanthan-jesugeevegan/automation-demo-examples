@@ -1,0 +1,21 @@
+{
+  "name": "chat-gpt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "generate-script": "node chat-gpt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.5.1",
+    "openai": "^3.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
