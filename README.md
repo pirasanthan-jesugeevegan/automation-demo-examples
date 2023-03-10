@@ -1,6 +1,5 @@
-![Cypress Demo Examples](/assets/banner.png)
-
 <p align="center">
+<img src="/assets/banner.png" alt="Github Stars" />
 </p>
    <p align="center" style="align: center;">
       <a href="https://github.com/pirasanthan-jesugeevegan/cypress-demo-examples/stargazers">
