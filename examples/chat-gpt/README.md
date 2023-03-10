@@ -1,5 +1,5 @@
  <p align="center">
-  <img height="100px" src="../../assets/ChatGPT.png" /> 
+  <img src="../../assets/ChatGPT.png" /> 
  </p>
  
  # ChatGPT
