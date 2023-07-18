@@ -16,4 +16,5 @@
 You can find all the examples listed inside the "examples" folder here:
 
 ### [examples/](examples/)
-- [examples/chat-gpt](examples/chat-gpt): Using ChatGPT to generate cypress test scripts
+- [examples/cypress-chat-gpt](examples/cypress-chat-gpt): Using ChatGPT to generate cypress test scripts
+- [examples/playwright-github-container-registry](examples/playwright-github-container-registry): Using ChatGPT to generate cypress test scripts
