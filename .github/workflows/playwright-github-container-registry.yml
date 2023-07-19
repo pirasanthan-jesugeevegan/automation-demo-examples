@@ -26,5 +26,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/${{ github.repository }}:${{ env.TAG }} .
+          docker build -t ghcr.io/${{ github.repository }}:${{ env.TAG }} -f examples/playwright-github-container-registry/Dockerfile .
           docker push ghcr.io/${{ github.repository }}:${{ env.TAG }}
