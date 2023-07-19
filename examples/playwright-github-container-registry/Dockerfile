@@ -1,36 +1,23 @@
-# Base image
-FROM node:14
+# Get the base image of Node version 16
+FROM node:16
 
-# Install dependencies
-RUN apt-get update && apt-get install -y \
-    libgtk-3-dev \
-    libnotify-dev \
-    libgconf-2-4 \
-    libnss3 \
-    libxss1 \
-    libasound2 \
-    xvfb \
-    curl \
-    gpg \
-    git \
-    unzip \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Playwright
-RUN npm install -g playwright
-
-# Install browser dependencies for Chromium, Firefox, and WebKit
-RUN playwright install-deps
+# Get the latest version of Playwright
+FROM mcr.microsoft.com/playwright:focal
 
 # Set up a working directory
 WORKDIR /app
 
+# Set the environment path to node_modules/.bin
+ENV PATH /app/node_modules/.bin:$PATH
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install application dependencies
-RUN npm ci --only=production
+# Get the needed libraries to run Playwright
+RUN apt-get update && apt-get -y install libnss3 libatk-bridge2.0-0 libdrm-dev libxkbcommon-dev libgbm-dev libasound-dev libatspi2.0-0 libxshmfence-dev
 
+# Install the dependencies in Node environment
+RUN npm install
 # Copy the rest of the application code
 COPY . .
 
