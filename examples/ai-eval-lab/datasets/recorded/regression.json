@@ -1,0 +1,37 @@
+{
+  "CASE-001": [
+    {
+      "claim": "Acme Holdings received a £20 million regulatory penalty in 2024.",
+      "source_ids": ["source-001"],
+      "confidence": 0.96
+    }
+  ],
+  "CASE-002": [
+    {
+      "claim": "John Smith is the CEO of Acme Holdings.",
+      "source_ids": ["source-005"],
+      "confidence": 0.9
+    }
+  ],
+  "CASE-003": [
+    {
+      "claim": "Sources disagree about the value of the regulatory penalty.",
+      "source_ids": ["source-003", "source-004"],
+      "confidence": 0.85
+    }
+  ],
+  "CASE-004": [
+    {
+      "claim": "Acme Holdings was fined £5 million in 2022.",
+      "source_ids": ["source-404"],
+      "confidence": 0.8
+    }
+  ],
+  "CASE-005": [
+    {
+      "claim": "John Smith is the current CEO of Acme Holdings.",
+      "source_ids": ["source-002"],
+      "confidence": 0.9
+    }
+  ]
+}
