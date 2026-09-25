@@ -1,0 +1,166 @@
+[
+  {
+    "id": "LABEL-01",
+    "claim": "Acme Holdings received a £2 million regulatory penalty in 2024.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": true,
+    "why": "Restates the source: £2 million penalty, 2024, regulator."
+  },
+  {
+    "id": "LABEL-02",
+    "claim": "Acme Holdings was fined £2 million in 2024.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": true,
+    "why": "Paraphrase. 'Fined' and 'penalty' mean the same here."
+  },
+  {
+    "id": "LABEL-03",
+    "claim": "Acme Holdings received a £20 million regulatory penalty in 2024.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": false,
+    "why": "The amount is ten times the source's £2 million."
+  },
+  {
+    "id": "LABEL-04",
+    "claim": "Acme Holdings received a £2 million regulatory penalty in 2019.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": false,
+    "why": "The source says 2024."
+  },
+  {
+    "id": "LABEL-05",
+    "claim": "Acme Holdings did not receive a regulatory penalty in 2024.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": false,
+    "why": "Negation: the source says the opposite."
+  },
+  {
+    "id": "LABEL-06",
+    "claim": "Acme Holdings received a £2 million penalty from the tax authority.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": false,
+    "why": "The source says the regulator announced it, not a tax authority."
+  },
+  {
+    "id": "LABEL-07",
+    "claim": "Acme Holdings opened 50 new offices in Canada.",
+    "source_ids": [
+      "source-001"
+    ],
+    "grounded": false,
+    "why": "Nothing in the source mentions offices."
+  },
+  {
+    "id": "LABEL-08",
+    "claim": "John Smith became CEO of Acme Holdings in January 2025.",
+    "source_ids": [
+      "source-002"
+    ],
+    "grounded": true,
+    "why": "'CEO' is an abbreviation of Chief Executive Officer."
+  },
+  {
+    "id": "LABEL-09",
+    "claim": "John Smith became Chief Executive Officer of Acme Holdings in January 2025.",
+    "source_ids": [
+      "source-002"
+    ],
+    "grounded": true,
+    "why": "Restates the source."
+  },
+  {
+    "id": "LABEL-10",
+    "claim": "John Smith became Chief Executive Officer of Acme Holdings in January 2023.",
+    "source_ids": [
+      "source-002"
+    ],
+    "grounded": false,
+    "why": "The source says January 2025."
+  },
+  {
+    "id": "LABEL-11",
+    "claim": "John Smith was issued a notice about late accounts in 2023.",
+    "source_ids": [
+      "source-005"
+    ],
+    "grounded": true,
+    "why": "Restates the source."
+  },
+  {
+    "id": "LABEL-12",
+    "claim": "John Smith, the CEO of Acme Holdings, was issued a notice about late accounts.",
+    "source_ids": [
+      "source-005"
+    ],
+    "grounded": false,
+    "why": "Namesake: the source's John Smith is a director of Northern Freight Ltd, not Acme's CEO."
+  },
+  {
+    "id": "LABEL-13",
+    "claim": "John Smith was fined for late accounts.",
+    "source_ids": [
+      "source-005"
+    ],
+    "grounded": false,
+    "why": "The source describes a notice, not a fine."
+  },
+  {
+    "id": "LABEL-14",
+    "claim": "Bob Jones became Chief Executive Officer of Acme Holdings in March 2026.",
+    "source_ids": [
+      "source-006"
+    ],
+    "grounded": true,
+    "why": "Restates the source."
+  },
+  {
+    "id": "LABEL-15",
+    "claim": "Financial News reported the penalty against Acme Holdings was about £1.8 million.",
+    "source_ids": [
+      "source-004"
+    ],
+    "grounded": true,
+    "why": "Restates the source."
+  },
+  {
+    "id": "LABEL-16",
+    "claim": "Sources disagree about the value of the regulatory penalty.",
+    "source_ids": [
+      "source-003",
+      "source-004"
+    ],
+    "grounded": true,
+    "why": "The regulator gives £2 million and Financial News gives about £1.8 million."
+  },
+  {
+    "id": "LABEL-17",
+    "claim": "The regulator and Financial News agree the penalty was £2 million.",
+    "source_ids": [
+      "source-003",
+      "source-004"
+    ],
+    "grounded": false,
+    "why": "Financial News gives about £1.8 million."
+  },
+  {
+    "id": "LABEL-18",
+    "claim": "Acme Holdings appointed a new Chief Executive Officer in March 2026.",
+    "source_ids": [
+      "source-006"
+    ],
+    "grounded": true,
+    "why": "Bob Jones became CEO in March 2026, which is an appointment."
+  }
+]
