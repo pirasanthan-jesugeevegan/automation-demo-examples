@@ -1,0 +1,60 @@
+name: ai-eval-lab
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "examples/ai-eval-lab/**"
+      - ".github/workflows/ai-eval-lab.yml"
+  pull_request:
+    paths:
+      - "examples/ai-eval-lab/**"
+      - ".github/workflows/ai-eval-lab.yml"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: examples/ai-eval-lab
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
+
+      - name: Install (Python version comes from .python-version)
+        run: uv sync --extra dev --frozen
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Format
+        run: uv run ruff format --check .
+
+      - name: Type check
+        run: uv run mypy
+
+      - name: Unit tests
+        run: uv run pytest
+
+      - name: The healthy baseline passes the gate
+        run: uv run python -m ai_eval_lab --recording baseline --max-invalid-citations 0
+
+      - name: The seeded regression is caught by the gate
+        shell: bash
+        run: |
+          set +e
+          uv run python -m ai_eval_lab --recording regression
+          code=$?
+          # 1 means "below the gate". Anything else (0 = not caught, 2 = bad input) is a broken evaluation.
+          if [ "$code" -ne 1 ]; then
+            echo "Expected the regression recording to fail the gate (exit 1), got exit $code."
+            exit 1
+          fi
+
+      - name: The offline judge stays within its measured accuracy
+        run: uv run python -m ai_eval_lab.judge_check --min-agreement 0.75 --max-false-pass-rate 0.25
