@@ -1,0 +1,67 @@
+[
+  {
+    "id": "CASE-001",
+    "description": "Straightforward regulatory finding",
+    "entity": {
+      "name": "Acme Holdings",
+      "entity_type": "company"
+    },
+    "expected_findings": [
+      {
+        "claim": "Acme Holdings received a £2 million regulatory penalty in 2024.",
+        "source_ids": ["source-001"]
+      }
+    ]
+  },
+  {
+    "id": "CASE-002",
+    "description": "Ambiguous person identity",
+    "entity": {
+      "name": "John Smith",
+      "entity_type": "person"
+    },
+    "expected_findings": [
+      {
+        "claim": "John Smith is the CEO of Acme Holdings.",
+        "source_ids": ["source-002"]
+      }
+    ]
+  },
+  {
+    "id": "CASE-003",
+    "description": "Conflicting source information",
+    "entity": {
+      "name": "Acme Holdings",
+      "entity_type": "company"
+    },
+    "expected_findings": [
+      {
+        "claim": "Sources disagree about the value of the regulatory penalty.",
+        "source_ids": ["source-003", "source-004"]
+      }
+    ]
+  },
+  {
+    "id": "CASE-004",
+    "description": "No supporting evidence",
+    "entity": {
+      "name": "Acme Holdings",
+      "entity_type": "company"
+    },
+    "expected_findings": []
+  },
+  {
+    "id": "CASE-005",
+    "description": "Outdated information",
+    "entity": {
+      "name": "Acme Holdings",
+      "entity_type": "company"
+    },
+    "expected_findings": [
+      {
+        "claim": "Bob Jones is the current CEO of Acme Holdings.",
+        "source_ids": ["source-006"]
+      }
+    ]
+  }
+]
