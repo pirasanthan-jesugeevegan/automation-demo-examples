@@ -1,2 +1,6 @@
 packages:
   - 'examples/*'
+
+# Cypress downloads its binary in a postinstall script; the examples that use it need that.
+allowBuilds:
+  cypress: true
