@@ -15,3 +15,11 @@ node_modules/
 # Ignore Cypress Temp files from examples
 examples/*/cypress/videos/*.*
 examples/*/cypress/screenshots/*.*
+
+# Python examples
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
